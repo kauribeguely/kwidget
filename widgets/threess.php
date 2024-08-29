@@ -1,4 +1,8 @@
+
 <?php
+
+// namespace Elementor;
+
 class Threess_Widget extends \Elementor\Widget_Base {
 
 	public function get_script_depends() {
@@ -48,6 +52,16 @@ class Threess_Widget extends \Elementor\Widget_Base {
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
 				'default' => esc_html__( 'Stay Focused', 'elementor-addon' ),
 			]
+		);
+
+		// Add Typography control
+		$this->add_group_control(
+            \Elementor\Group_Control_Typography::get_type(),
+				[
+						'name' => 'title_typography', // Unique name for the typography control
+						'label' => __( 'Typography', 'text-domain' ),
+						'selector' => '{{WRAPPER}} .integral', // The CSS selector of the text element to apply typography
+				]
 		);
 
 		$this->end_controls_section();
