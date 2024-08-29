@@ -1,0 +1,412 @@
+body, html
+{
+  margin: 0px;
+  height: 100%;
+}
+
+body, .bothSections
+{
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+h1
+{
+  /* position: absolute; */
+  font-size: 38px;
+  font-family: Bomber;
+  z-index: 3;
+  margin: 0px;
+  width: -moz-fit-content;
+  width: fit-content;
+  /* text-shadow: 2px 2px 6px #0000006b; */
+  font-weight: 100;
+  user-select: none;
+/*   white-space: nowrap; */
+  /* padding: 10px; */
+  /* opacity: 0.6; */
+  /* font-family: Poppins; */
+  /* font-weight: 1000; */
+  /* text-transform: uppercase; */
+  /* font-style: italic; */
+  /* letter-spacing: -1px; */
+}
+
+.scene
+{width: 100%;/* filter: blur(16px); */height: 100%;display: flex;perspective: 880px;transition: transform 0.2s ease-out, perspective-origin 0.2s ease-out;justify-content: center;align-items: center;transform-style: preserve-3d;}
+
+.phoneScene
+{
+  transition: perspective-origin 0.2s ease-out, transform 0.2s ease-out;
+}
+
+.mobScene
+{
+  position: absolute;
+  /* width: 360px!important; */
+  /* height: 832px; */
+  aspect-ratio: 1/2;
+  perspective: 800px;
+  transform-style: preserve-3d;
+}
+
+.mobSect
+{
+  display: none;
+}
+
+.overflow
+{
+/*   overflow: hidden; */
+  width: 100%;
+  height: 100%;
+  /* background: blue; */
+  /* background: #f6c6c2; */
+}
+
+.selected
+{
+  /* background: #00000005;
+  border: 2px solid #bfbfc7; */
+  /* z-index: 100; */
+}
+
+.section
+{
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* phone stuff */
+.phone-outline
+{
+  width: 260px;
+  display: flex;
+  position: absolute;
+  /* overflow: hidden; */
+  /* top: 0; */
+  transform-style: preserve-3d;
+  perspective: 800px;
+  /* transform: translate3d(-9px, 144px, -120px) rotateX(-5deg) rotateY(25deg) rotateZ(0deg) scale3d(1, 1, 1); */
+}
+
+.innervid
+{
+  /* height: 535px; */
+  width: 269px;
+  /* top: -20px; */
+  /* left: -13px; */
+  position: absolute;
+  /* cursor: crosshair; */
+}
+
+.phone-inner-div
+{
+    position: relative;
+    width: 240px;
+    height: 496px;
+    top: 10px;
+    left: 10px;
+    background: black;
+    border-radius: 40px;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 800px;
+}
+
+img.border-image
+{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    pointer-events: none;
+    user-select: none;
+}
+/* ------------- */
+.image3
+{
+
+position: absolute;
+
+/* max-width: 261px; */
+
+/* max-height: 350px; */
+
+z-index: 200;
+
+user-select: none;
+
+/* height: 5vw; */
+
+/* opacity: 0.3!important; */
+
+/* mix-blend-mode: screen; */
+}
+
+.threeGroup
+{
+
+position: absolute;
+
+/* transition: none!important; */
+
+transform-style: preserve-3d;
+
+/* perspective: 800px; */
+
+display: flex;
+
+justify-content: center;
+
+/* overflow: hidden; */
+
+align-items: center;
+
+width: 400px;
+
+height: 400px;
+
+border-style: none;
+}
+
+.center
+{
+  display: none;
+}
+
+/*start slider css */
+
+.slideCont
+{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.slidingArea
+{
+  display: flex;
+  width: 300%;
+  height: 100%;
+  left: 0%;
+  transition: all 1s ease;
+  position: relative;
+}
+
+.arrow
+{
+border: 4px rgb(5, 21, 135) solid;
+    box-shadow: -4px 5px #051587;
+    width: 67px;
+    height: 67px;
+  width: 76px; height: 76px; position: absolute; background: white; bottom: 20%; display: flex; align-items: center; justify-content: center; border-radius: 50%;
+}
+
+.arrow:hover
+{
+  cursor: pointer;
+}
+
+  .arrow p {
+    color: white;
+    font-family: Bomber;
+    font-size: 48px;
+    -webkit-text-stroke: 4px rgb(5, 21, 135);
+    text-shadow: rgb(5, 21, 135) 0.04em 0.04em, rgb(5, 21, 135) 0.08em 0.08em;
+    rotate: 90deg;
+  }
+
+.slide {width: 100%; height: 100%;}
+
+.rightArrow {left: 50px;}
+
+.leftArrow {right: 50px;}
+
+  .leftArrow p {
+    rotate: -90deg;
+    text-shadow: rgb(5, 21, 135) -0.04em -0.04em, rgb(5, 21, 135) -0.08em -0.08em;
+}
+
+/*end slider css */
+
+.nasa
+{
+  font-family: Nasa;
+  font-weight: normal;
+}
+
+.integral
+{
+  font-family: Integral;
+  font-weight: normal;
+}
+
+.montserrat
+{
+  font-family: Montserrat;
+  font-weight: normal;
+}
+
+.league
+{
+  font-family: League;
+  /* font-weight: normal; */
+}
+
+.oswald
+{
+  font-family: Oswald;
+  font-weight: normal;
+}
+
+.bomber
+{
+  font-family: Bomber;
+  font-weight: normal;
+}
+
+.poppinsblack
+{
+  font-family: Poppins;
+  font-weight: 1000;
+  text-transform: uppercase;
+  font-style: italic;
+  letter-spacing: -1px;
+}
+
+.impact
+{
+  font-family: impact;
+}
+
+
+.textContainer
+{
+  position: absolute;
+  display: inline-block;
+  transform-origin: 50% 50%;
+  /* display: flex; */
+  /* width: auto; */
+  justify-content: center;
+  align-items: end;
+}
+
+.templateCenter
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.templateDiv
+{
+  position: absolute;
+}
+
+.relative
+{
+  position: relative!important;
+}
+
+.allCornersRotate
+{
+  animation: allCornersRotate 6s infinite ease-in-out;
+}
+
+@keyframes allCornersRotate
+{
+    0%
+    {
+        transform: rotateX(-5deg) rotateY(-5deg) rotateZ(-2deg);
+    }
+    25%
+    {
+        transform: rotateX(-5deg) rotateY(5deg) rotateZ(2deg);
+    }
+    50%
+    {
+        transform: rotateX(5deg) rotateY(5deg) rotateZ(2deg);
+    }
+    75%
+    {
+        transform: rotateX(5deg) rotateY(-5deg) rotateZ(-2deg);
+    }
+    100%
+    {
+        transform: rotateX(-5deg) rotateY(-5deg) rotateZ(-2deg);
+    }
+}
+
+
+@keyframes mobileAnim
+{
+  0% {
+        transform: rotateX(-1deg) rotateY(5deg) rotateZ(-2deg);
+    }
+
+    100% {
+        transform: rotateX(3deg) rotateY(-5deg) rotateZ(2deg);
+    }
+}
+
+@media only screen and (max-width: 1400px)
+{
+  .scaleMe
+  {
+      scale: 0.6;
+  }
+}
+
+/* MOBILE STYLES */
+@media only screen and (max-width: 600px)
+{
+
+  /* .scaleMe
+  {
+      scale: 1;
+  } */
+
+  .mobSect
+  {
+    display: flex;
+  }
+
+  .bigScreenSect
+  {
+    display:none;
+  }
+
+    .arrow
+    {
+        width: 55px;
+        height: 55px;
+        bottom: 27%;
+    }
+
+    .arrow:hover
+    {
+      cursor: pointer;
+    }
+
+    .rightArrow {
+      left: 6px;
+    }
+
+    .leftArrow {
+      right: 6px;
+    }
+
+  /* .scene, .scene2 */
+  /* .mobAnim */
+  .scene
+  {
+    animation: mobileAnim 3s infinite ease alternate;
+  }
+}

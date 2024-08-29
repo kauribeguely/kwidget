@@ -19,3 +19,17 @@ function register_hello_world_widget( $widgets_manager ) {
 
 }
 add_action( 'elementor/widgets/register', 'register_hello_world_widget' );
+
+/**
+ * Register scripts and styles for Elementor test widgets.
+ */
+function kwidgets_dependencies() {
+
+	/* Scripts */
+	wp_register_script( 'three-export-script', plugins_url( 'js/threeExport.js', __FILE__ ) );
+
+	/* Styles */
+	wp_register_script( 'three-export-script', plugins_url( 'css/threeExport.js', __FILE__ ) );
+
+}
+add_action( 'wp_enqueue_scripts', 'kwidgets_dependencies' );
