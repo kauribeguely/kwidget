@@ -13,9 +13,11 @@ function register_hello_world_widget( $widgets_manager ) {
 
 	// require_once( __DIR__ . '/widgets/helloWidge.php' );
 	require_once( __DIR__ . '/widgets/hello-world-widget-2.php' );
+	require_once( __DIR__ . '/widgets/threess.php' );
 
 	// $widgets_manager->register( new \Elementor_Hello_World_Widget_1() );
 	$widgets_manager->register( new \Elementor_Hello_World_Widget_2() );
+	$widgets_manager->register( new \Threess_Widget() );
 
 }
 add_action( 'elementor/widgets/register', 'register_hello_world_widget' );
@@ -29,7 +31,7 @@ function kwidgets_dependencies() {
 	wp_register_script( 'three-export-script', plugins_url( 'js/threeExport.js', __FILE__ ) );
 
 	/* Styles */
-	wp_register_script( 'three-export-script', plugins_url( 'css/threeExport.js', __FILE__ ) );
+	wp_register_style( 'three-export-style', plugins_url( 'css/threeExport.css', __FILE__ ) );
 
 }
 add_action( 'wp_enqueue_scripts', 'kwidgets_dependencies' );
