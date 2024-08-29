@@ -35,3 +35,19 @@ function kwidgets_dependencies() {
 
 }
 add_action( 'wp_enqueue_scripts', 'kwidgets_dependencies' );
+
+
+
+
+	function register_custom_widget_category( $elements_manager ) {
+
+    $elements_manager->add_category(
+        'aka-codes',  // Unique slug for the category
+        [
+            'title' => __( 'AkaCodes', 'text-domain' ),  // Display name of the category
+            'icon' => 'fa fa-plug',  // Optional icon for the category
+        ]
+	    );
+
+	}
+	add_action( 'elementor/elements/categories_registered', 'register_custom_widget_category' );
