@@ -18,7 +18,7 @@ class Threess_Widget extends \Elementor\Widget_Base {
 	}
 
 	public function get_title() {
-		return esc_html__( 'Three S S 2', 'elementor-addon' );
+		return esc_html__( 'Three S S', 'elementor-addon' );
 	}
 
 	public function get_icon() {
