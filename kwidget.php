@@ -19,9 +19,12 @@ function register_hello_world_widget( $widgets_manager ) {
 
 	require_once( __DIR__ . '/widgets/threess.php' );
 	$widgets_manager->register( new \Threess_Widget() );
-	
+
 	require_once( __DIR__ . '/widgets/threess2.php' );
 	$widgets_manager->register( new \Threess_Widget2() );
+
+	require_once( __DIR__ . '/widgets/two-phones.php' );
+	$widgets_manager->register( new \Two_Phones() );
 
 }
 add_action( 'elementor/widgets/register', 'register_hello_world_widget' );
