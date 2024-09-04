@@ -134,6 +134,8 @@ img.border-image
 
 position: absolute;
 
+/* elementor image css override */
+max-width: none !important;
 /* max-width: 261px; */
 
 /* max-height: 350px; */
