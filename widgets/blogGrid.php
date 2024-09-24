@@ -47,6 +47,39 @@ class Post_Grid_Widget extends \Elementor\Widget_Base {
         );
 
         $this->end_controls_section();
+
+
+
+				// Start content section for typography
+		    $this->start_controls_section(
+		        'content_typography_section',
+		        [
+		            'label' => __( 'Content Typography', 'plugin-name' ),
+		            'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+		        ]
+		    );
+
+		    // Typography for the Post Title
+		    $this->add_group_control(
+		        \Elementor\Group_Control_Typography::get_type(),
+		        [
+		            'name' => 'post_title_typography',
+		            'label' => __( 'Post Title Typography', 'plugin-name' ),
+		            'selector' => '{{WRAPPER}} .post-content h3',
+		        ]
+		    );
+
+		    // Typography for the Post Excerpt
+		    $this->add_group_control(
+		        \Elementor\Group_Control_Typography::get_type(),
+		        [
+		            'name' => 'post_excerpt_typography',
+		            'label' => __( 'Post Excerpt Typography', 'plugin-name' ),
+		            'selector' => '{{WRAPPER}} .post-content p',
+		        ]
+		    );
+
+		    $this->end_controls_section();
     }
 
     // Widget rendering
