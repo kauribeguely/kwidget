@@ -1,0 +1,33 @@
+.post-grid-widget {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 15px;
+}
+
+.post-thumbnail img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.post-content h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.post-content h3 a {
+    text-decoration: none;
+    color: #333;
+}
+
+.post-content h3 a:hover {
+    color: #0073aa;
+}

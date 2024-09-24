@@ -16,7 +16,7 @@ function registerAllWidgets( $widgets_manager ) {
 
 	// $widgets_manager->register( new \Elementor_Hello_World_Widget_1() );
 	// $widgets_manager->register( new \Elementor_Hello_World_Widget_2() );
-	
+
 	require_once( __DIR__ . '/widgets/two-phones.php' );
 	$widgets_manager->register( new \Two_Phones() );
 
@@ -25,6 +25,9 @@ function registerAllWidgets( $widgets_manager ) {
 
 	require_once( __DIR__ . '/widgets/threess2.php' );
 	$widgets_manager->register( new \Threess_Widget2() );
+
+	require_once( __DIR__ . '/widgets/blogGrid.php' );
+	$widgets_manager->register( new \Post_Grid_Widget() );
 
 
 }
@@ -37,9 +40,11 @@ function kwidgets_dependencies() {
 
 	/* Scripts */
 	wp_register_script( 'three-export-script', plugins_url( 'js/threeExport.js', __FILE__ ) );
+	// wp_register_script( 'blog-grid-script', plugins_url( 'js/blogGrid.js', __FILE__ ) );
 
 	/* Styles */
 	wp_register_style( 'three-export-style', plugins_url( 'css/threeExport.css', __FILE__ ) );
+	wp_register_style( 'blog-grid-style', plugins_url( 'css/blogGrid.css', __FILE__ ) );
 
 }
 add_action( 'wp_enqueue_scripts', 'kwidgets_dependencies' );
