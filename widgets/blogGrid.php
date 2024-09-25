@@ -49,8 +49,7 @@ class Post_Grid_Widget extends \Elementor\Widget_Base {
         $this->end_controls_section();
 
 
-
-				// Start content section for typography
+		    // Start content section for typography
 		    $this->start_controls_section(
 		        'content_typography_section',
 		        [
@@ -69,6 +68,18 @@ class Post_Grid_Widget extends \Elementor\Widget_Base {
 		        ]
 		    );
 
+		    // Color control for the Post Title
+		    $this->add_control(
+		        'post_title_color',
+		        [
+		            'label' => __( 'Post Title Color', 'plugin-name' ),
+		            'type' => \Elementor\Controls_Manager::COLOR,
+		            'selectors' => [
+		                '{{WRAPPER}} .post-content h3 a' => 'color: {{VALUE}};',
+		            ],
+		        ]
+		    );
+
 		    // Typography for the Post Excerpt
 		    $this->add_group_control(
 		        \Elementor\Group_Control_Typography::get_type(),
@@ -79,8 +90,20 @@ class Post_Grid_Widget extends \Elementor\Widget_Base {
 		        ]
 		    );
 
+		    // Color control for the Post Excerpt
+		    $this->add_control(
+		        'post_excerpt_color',
+		        [
+		            'label' => __( 'Post Excerpt Color', 'plugin-name' ),
+		            'type' => \Elementor\Controls_Manager::COLOR,
+		            'selectors' => [
+		                '{{WRAPPER}} .post-content p' => 'color: {{VALUE}};',
+		            ],
+		        ]
+		    );
+
 		    $this->end_controls_section();
-    }
+		}
 
     // Widget rendering
     protected function render() {
